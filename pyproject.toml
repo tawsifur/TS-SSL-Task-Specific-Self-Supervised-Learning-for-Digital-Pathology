@@ -1,0 +1,50 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ts-ssl"
+version = "0.1.0"
+description = "Task-Specific Self-Supervised Learning for digital pathology (scAE + attention MIL)."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+    { name = "Tawsifur Rahman", email = "trahma34@jhu.edu" },
+    { name = "Alexander S. Baras" },
+    { name = "Rama Chellappa" },
+]
+keywords = [
+    "computational-pathology",
+    "self-supervised-learning",
+    "multiple-instance-learning",
+    "whole-slide-images",
+    "attention",
+]
+dependencies = [
+    "torch>=1.12",
+    "torchvision>=0.13",
+    "numpy>=1.21",
+    "scipy>=1.7",
+    "scikit-learn>=1.0",
+    "h5py>=3.1",
+    "matplotlib>=3.4",
+    "pillow>=8.0",
+    "pyyaml>=5.4",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0", "ruff>=0.1"]
+
+[project.scripts]
+ts-ssl = "ts_ssl.cli:main"
+
+[project.urls]
+"Paper" = "https://doi.org/10.1016/j.modpat.2024.100636"
+"Homepage" = "https://github.com/tawsifur/TS-SSL"
+
+[tool.setuptools.packages.find]
+include = ["ts_ssl*"]
+
+[tool.ruff]
+line-length = 100
