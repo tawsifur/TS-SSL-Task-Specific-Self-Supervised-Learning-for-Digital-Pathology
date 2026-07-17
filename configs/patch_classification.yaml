@@ -1,0 +1,8 @@
+# Downstream patch classification (frozen scAE encoder + MLP head)
+epochs: 40
+batch_size: 128
+lr: 0.001             # paper setting
+val_frac: 0.2
+image_size: 96
+workers: 4
+seed: 42

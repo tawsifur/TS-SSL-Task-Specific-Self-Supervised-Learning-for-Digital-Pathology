@@ -1,0 +1,10 @@
+# scAE self-supervised pretraining
+embed_dim: 128
+base: 32
+subsample: 0.1        # fraction of patches used for pretraining (paper: 0.01-0.5)
+epochs: 20
+batch_size: 256
+lr: 0.003             # paper setting
+image_size: 96
+workers: 4
+seed: 42
